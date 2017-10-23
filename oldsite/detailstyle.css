@@ -1,0 +1,15 @@
+body{
+    background-color:#AACCFF;
+    border:#0000FF 0px solid
+}
+td{
+    width:220px;
+    
+}
+tr{
+    border-right:1px #55A solid;
+}
+h5{
+    
+    color:#555;
+}
