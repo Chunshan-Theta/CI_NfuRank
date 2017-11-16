@@ -5,6 +5,7 @@ class Controller_dynamicpage extends CI_Controller {
          {
               parent::__construct();
               $this->load->model('model_sql');
+              
          }
 
 
@@ -52,14 +53,14 @@ class Controller_dynamicpage extends CI_Controller {
               }
               
               
-              
               if (! file_exists(APPPATH.'views/dynamicpage/home.php'))
               {
-               echo ('<script>alert("file_exists")</script>');
+               #echo ('<script>alert("file_exists")</script>');
                show_404();
               }
-
+              
               $data['quert'] = $this->model_sql->get_sql_all('nfu',10);
+              $this->model_sql->insert_login($list='LoginDoc',$LoginIP=$_SERVER['REMOTE_ADDR']);
               $this->load->view('templates/header');
               $this->load->view('dynamicpage/home',$data);
               $this->load->view('templates/footer');
@@ -89,8 +90,7 @@ class Controller_dynamicpage extends CI_Controller {
               $data['quert'] = $this->model_sql->get_sql_like('nfu','classN',$classname,null);
               if (empty($data['quert']))
               {
-               #echo ('<script>alert("查無相關資料")</script>');
-               header('Location:home');
+               echo ('<script>alert("查無相關資料")</script>');
               }
               
               /* $data['teacherN'] = $data['quert']['teacherN']; */
@@ -108,8 +108,7 @@ class Controller_dynamicpage extends CI_Controller {
               $data['quert'] = $this->model_sql->get_sql_like('nfu','teacherN',$teachername,null);
               if (empty($data['quert']))
               {
-               #echo ('<script>alert("查無相關資料")</script>');
-               header('Location:home');
+               echo ('<script>alert("查無相關資料")</script>');
               }
               
               /* $data['teacherN'] = $data['quert']['teacherN']; */
@@ -127,8 +126,7 @@ class Controller_dynamicpage extends CI_Controller {
               $data['quert'] = $this->model_sql->get_sql_like('nfu','major',$major,null);
               if (empty($data['quert']))
               {
-               #echo ('<script>alert("查無相關資料")</script>');
-               header('Location:home');
+               echo ('<script>alert("查無相關資料")</script>');
               }
               
               /* $data['teacherN'] = $data['quert']['teacherN']; */

@@ -86,6 +86,19 @@ class Model_sql extends CI_Model {
                   
                   return $this->db->insert($list, $data);
      }
+     public function insert_login($list='LoginDoc',$LoginIP="127.0.0.1")
+     {              
+                  #echo ('<script>alert("model_insert_nfu")</script>');
+                  $this->load->helper('url');
+                  
+                  $slug = url_title($this->input->post('title'), 'dash', TRUE);
+                  
+                  $data = array(
+                   'LoginIP' => $this->model_sql->textcheck($LoginIP),
+                  );
+                  
+                  return $this->db->insert($list, $data);
+     }
      public function textcheck($s){
             /* 非法字元 */
             $s = str_replace ("<","",$s);

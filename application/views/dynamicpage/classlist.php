@@ -25,10 +25,19 @@
                             <table class="table table-striped">
 
                               <tbody>
+                                    <tr>
+                                        <td><h5 class="text-primary">課程名稱</td>
+                                        <td><h5 class="text-primary">教師姓名</td>
+                                        <td><h5 class="text-primary">學期</td>
+                                        <td><h5 class="text-primary">開設系別</td>
+                                        <td><h5 class="text-primary">學分數</td>
+                                        <td><h5 class="text-primary">開課類別</td>
+                                        <td><h5 class="text-primary">英文課名</td>
+                                    </tr>
                                 <?php foreach ($quert as $q): ?>
                                     <tr>
-                                        <td><a href="https://vci-40241124.rhcloud.com/home?classname=<?php echo $q['classN'] ?>"><?php echo $q['classN'] ?></a></td>
-                                        <td><a href="https://vci-40241124.rhcloud.com/home?teachername=<?php echo $q['teacherN'] ?>"><?php echo $q['teacherN'] ?></a></td>                                        
+                                        <td><a href="./Sclassname?classname=<?php echo $q['classN'] ?>"><?php echo $q['classN'] ?></a></td>
+                                        <td><a href="./Steachername?teachername=<?php echo $q['teacherN'] ?>"><?php echo $q['teacherN'] ?></a></td>                                        
                                         <td><?php echo $q['turn'] ?></td>
                                         <td><?php echo $q['major'] ?></td>
                                         <td><?php echo $q['credit'] ?></td>
@@ -38,17 +47,7 @@
                                 <?php endforeach ?>
                                 
                               </tbody>
-                              <thead>
-                                <tr>
-                                    <td><h5 class="text-primary">課程名稱</td>
-                                    <td><h5 class="text-primary">教師姓名</td>
-                                    <td><h5 class="text-primary">學期</td>
-                                    <td><h5 class="text-primary">開設系別</td>
-                                    <td><h5 class="text-primary">學分數</td>
-                                    <td><h5 class="text-primary">開課類別</td>
-                                    <td><h5 class="text-primary">英文課名</td>
-                                </tr>
-                              </thead>
+                              
                             </table>
                           </div>
                         </div>

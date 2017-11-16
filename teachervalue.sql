@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10.12
+-- version 4.5.4.1deb2ubuntu2
 -- http://www.phpmyadmin.net
 --
--- 主機: 127.9.53.130:3306
--- 建立日期: 2017 年 09 月 26 日 05:17
--- 伺服器版本: 5.5.52
--- PHP 版本: 5.3.3
+-- Host: localhost
+-- Generation Time: Nov 16, 2017 at 11:09 PM
+-- Server version: 5.7.20-0ubuntu0.16.04.1
+-- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,20 +14,101 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- 資料庫: `teachervalue`
+-- Database: `teachervalue`
 --
+CREATE DATABASE IF NOT EXISTS `teachervalue` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `teachervalue`;
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `nfu`
+-- Table structure for table `LoginDoc`
 --
 
-CREATE TABLE IF NOT EXISTS `nfu` (
-  `id` int(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `LoginDoc` (
+  `id` int(11) NOT NULL,
+  `LoginIP` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `LoginTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `LoginDoc`
+--
+
+INSERT INTO `LoginDoc` (`id`, `LoginIP`, `LoginTime`) VALUES
+(1, '127.0.0.1', '2017-11-14 15:23:33'),
+(2, '127.0.0.1', '2017-11-14 15:23:46'),
+(3, '140.115.135.121', '2017-11-14 15:24:43'),
+(4, '61.63.110.221', '2017-11-14 15:24:55'),
+(5, '202.39.224.234', '2017-11-14 17:53:09'),
+(6, '202.39.224.234', '2017-11-14 20:01:17'),
+(7, '111.83.213.184', '2017-11-15 04:51:54'),
+(8, '111.83.213.184', '2017-11-15 04:52:05'),
+(9, '111.83.213.184', '2017-11-15 04:52:06'),
+(10, '111.83.213.184', '2017-11-15 04:52:52'),
+(11, '111.83.213.184', '2017-11-15 04:52:52'),
+(12, '39.12.137.68', '2017-11-15 08:09:37'),
+(13, '39.12.137.68', '2017-11-15 08:10:45'),
+(14, '39.12.137.68', '2017-11-15 08:10:54'),
+(15, '39.12.137.68', '2017-11-15 08:11:05'),
+(16, '39.12.137.68', '2017-11-15 08:11:15'),
+(17, '66.102.6.154', '2017-11-15 13:25:30'),
+(18, '101.8.231.202', '2017-11-16 04:11:32'),
+(19, '101.8.231.202', '2017-11-16 04:11:37'),
+(20, '101.8.231.202', '2017-11-16 04:11:53'),
+(21, '101.8.231.202', '2017-11-16 04:11:53'),
+(22, '101.8.231.202', '2017-11-16 04:12:08'),
+(23, '101.8.231.202', '2017-11-16 04:12:16'),
+(24, '120.113.96.108', '2017-11-16 05:46:41'),
+(25, '120.113.96.108', '2017-11-16 05:46:58'),
+(26, '1.200.35.215', '2017-11-16 11:19:13'),
+(27, '61.63.110.221', '2017-11-16 14:45:11'),
+(28, '61.63.110.221', '2017-11-16 14:45:19'),
+(29, '61.63.110.221', '2017-11-16 14:45:19'),
+(30, '61.63.110.221', '2017-11-16 14:47:29'),
+(31, '61.63.110.221', '2017-11-16 14:49:14'),
+(32, '61.63.110.221', '2017-11-16 14:49:19'),
+(33, '61.63.110.221', '2017-11-16 14:49:29'),
+(34, '61.63.110.221', '2017-11-16 14:50:33'),
+(35, '61.63.110.221', '2017-11-16 14:50:45'),
+(36, '61.63.110.221', '2017-11-16 14:52:28'),
+(37, '61.63.110.221', '2017-11-16 14:52:32'),
+(38, '61.63.110.221', '2017-11-16 14:52:54'),
+(39, '61.63.110.221', '2017-11-16 14:56:26'),
+(40, '61.63.110.221', '2017-11-16 14:56:48'),
+(41, '61.63.110.221', '2017-11-16 14:56:48'),
+(42, '61.63.110.221', '2017-11-16 14:56:58'),
+(43, '61.63.110.221', '2017-11-16 14:57:16'),
+(44, '61.63.110.221', '2017-11-16 14:57:35'),
+(45, '61.63.110.221', '2017-11-16 14:57:35'),
+(46, '61.63.110.221', '2017-11-16 14:58:56'),
+(47, '61.63.110.221', '2017-11-16 14:59:09'),
+(48, '61.63.110.221', '2017-11-16 15:00:04'),
+(49, '61.63.110.221', '2017-11-16 15:00:10'),
+(50, '61.63.110.221', '2017-11-16 15:00:10'),
+(51, '61.63.110.221', '2017-11-16 15:00:12'),
+(52, '61.63.110.221', '2017-11-16 15:00:13'),
+(53, '61.63.110.221', '2017-11-16 15:00:26'),
+(54, '61.63.110.221', '2017-11-16 15:01:28'),
+(55, '61.63.110.221', '2017-11-16 15:02:02'),
+(56, '61.63.110.221', '2017-11-16 15:03:33'),
+(57, '61.63.110.221', '2017-11-16 15:03:39'),
+(58, '61.63.110.221', '2017-11-16 15:03:44'),
+(59, '61.63.110.221', '2017-11-16 15:03:51'),
+(60, '61.63.110.221', '2017-11-16 15:03:58'),
+(61, '61.63.110.221', '2017-11-16 15:04:01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nfu`
+--
+
+CREATE TABLE `nfu` (
+  `id` int(50) NOT NULL,
   `classN` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `teacherN` varchar(4) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `major` varchar(6) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -40,12 +121,11 @@ CREATE TABLE IF NOT EXISTS `nfu` (
   `homework` int(50) NOT NULL,
   `classexam` int(50) NOT NULL,
   `posttime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `error` int(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=194 ;
+  `error` int(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 資料表的匯出資料 `nfu`
+-- Dumping data for table `nfu`
 --
 
 INSERT INTO `nfu` (`id`, `classN`, `teacherN`, `major`, `midexam`, `endexam`, `say`, `value`, `cost`, `classcall`, `homework`, `classexam`, `posttime`, `error`) VALUES
@@ -200,8 +280,7 @@ INSERT INTO `nfu` (`id`, `classN`, `teacherN`, `major`, `midexam`, `endexam`, `s
 (154, '英文', '魏名興', '英文', '筆試(選擇題居多)', '筆試(選擇題居多)', '人超好 超好過 他不喜歡別人代逼卡 他偶爾點名', '超好過推薦', '簡單', 1, 0, 0, '2016-12-23 03:51:38', NULL),
 (155, '心理學導論', '施淑真', '通識', '上臺報告(團體)', '筆試(選擇題居多)', '老師都是用PPT上課，期中報告以電影或小說分析心理上台報告(做PPT)，上課內容充實，分享的故事、影片十分精采，課程剛開始會有心理測驗，讓你更了解自己~好老師推推~~~', '課程內容充實推薦', '簡單', 0, 0, 0, '2016-12-23 04:15:28', NULL),
 (156, '專利智慧財產權', '陳明群', '通識', '筆試(選擇題居多)', '筆試(選擇題居多)', '老師會跟你講考試範圍與題庫(要自己記)，然後可能要寫法院旁聽報告(唯一的一項作業)', '一般', '一般', 0, 1, 0, '2016-12-23 07:04:14', NULL),
-(157, '心理與人生', '王清煌', '通識', '筆試(選擇題居多)', '筆試(選擇題居多)', '只要呼吸就好', '超好過推薦', '非常簡單', 0, 1, 0, '2016-12-23 11:10:10', NULL);
-INSERT INTO `nfu` (`id`, `classN`, `teacherN`, `major`, `midexam`, `endexam`, `say`, `value`, `cost`, `classcall`, `homework`, `classexam`, `posttime`, `error`) VALUES
+(157, '心理與人生', '王清煌', '通識', '筆試(選擇題居多)', '筆試(選擇題居多)', '只要呼吸就好', '超好過推薦', '非常簡單', 0, 1, 0, '2016-12-23 11:10:10', NULL),
 (158, '哲學概論(核)', '蘇益慶', '通識', '其他', '繳交報告(個人)', '老師平日上課會發簽到單，可以翹課三次。期中考試選擇加一題申論，期末報告1000字到3000字，老師上課方式我覺得蠻有趣的', '超好過推薦', '簡單', 1, 0, 0, '2016-12-23 12:50:15', NULL),
 (159, '營養與生活', '林旻樺', '通識', '筆試(選擇題居多)', '筆試(選擇題居多)', '', '一般', '簡單', 1, 0, 0, '2016-12-24 02:15:28', NULL),
 (160, '國際企業管理', '劉慶湘', '企業管理系', '上臺報告(團體)', '無', '老師上課兩三個禮拜後，上課的時間會變成一半老師上課一半學生報告，報告的話是依自己組選定的國家來報告，基本上分組的話一定會有組(通常先以自行分組，找不到人的老師會幫你分)，然後上課認真聽有問題搶答可以加分，老師人很好很開明。', '課程內容充實推薦', '一般', 0, 0, 1, '2016-12-24 07:50:11', NULL),
@@ -242,10 +321,10 @@ INSERT INTO `nfu` (`id`, `classN`, `teacherN`, `major`, `midexam`, `endexam`, `s
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `nfuclass`
+-- Table structure for table `nfuclass`
 --
 
-CREATE TABLE IF NOT EXISTS `nfuclass` (
+CREATE TABLE `nfuclass` (
   `teacherN` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `year` int(50) NOT NULL,
   `turn` int(50) NOT NULL,
@@ -256,12 +335,11 @@ CREATE TABLE IF NOT EXISTS `nfuclass` (
   `major` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `classtype` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `credit` int(50) NOT NULL,
-  `error` int(50) DEFAULT NULL,
-  PRIMARY KEY (`classid`)
+  `error` int(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- 資料表的匯出資料 `nfuclass`
+-- Dumping data for table `nfuclass`
 --
 
 INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
@@ -654,8 +732,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('黃雅惠', 104, 1, '1551', '10411551', '服務學習(一)', 'Service Learning(1)', '四材料一乙', '共同', 0, NULL),
 ('李燕珠', 104, 1, '1552', '10411552', '計算機程式', 'Programming Languages', '四材料一乙', '必修', 2, NULL),
 ('郭賓崇', 104, 1, '1553', '10411553', '化學實驗', 'Experimental Chemistry', '四材料一乙', '必修專業', 1, NULL),
-('曾春風', 104, 1, '1554', '10411554', '材料科學導論(一)', 'Introduction to Materials Science(1)', '四材料一乙', '必修專業', 3, NULL);
-INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
+('曾春風', 104, 1, '1554', '10411554', '材料科學導論(一)', 'Introduction to Materials Science(1)', '四材料一乙', '必修專業', 3, NULL),
 ('楊閔惠', 104, 1, '1555', '10411555', '化學(一)', 'Chemistry(1)', '四材料一乙', '必修專業', 3, NULL),
 ('蔡定侃', 104, 1, '1556', '10411556', '材料科技概論', 'Introduction to Materials Technology', '四材料一乙', '選修', 3, NULL),
 ('楊勝州', 104, 1, '1557', '10411557', '物理(一)', 'Physics(1)', '四材料一乙', '必修', 3, NULL),
@@ -785,7 +862,8 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('閔庭輝', 104, 1, '1746', '10411746', '有機及染敏太陽電池創意實作', 'Practical Project', '四電子四甲', '選修', 3, NULL),
 ('康世昊', 104, 1, '1751', '10411751', '通識教育講座', 'Lectures for General Education', '四資管一甲', '共同', 1, NULL),
 ('莊美芳', 104, 1, '1752', '10411752', '國文(一)', 'Chinese(1)', '四資管一甲', '共同', 2, NULL),
-('李瑞麟', 104, 1, '1753', '10411753', '微積分(一)', 'Calculus(1)', '四資管一甲', '必修', 3, NULL),
+('李瑞麟', 104, 1, '1753', '10411753', '微積分(一)', 'Calculus(1)', '四資管一甲', '必修', 3, NULL);
+INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
 ('廖尹華', 104, 1, '1754', '10411754', '體育(一)', 'Physical Education(1)', '四資管一甲', '共同', 0, NULL),
 ('黃雅惠', 104, 1, '1755', '10411755', '服務學習(一)', 'Service Learning(1)', '四資管一甲', '共同', 0, NULL),
 ('涂光億', 104, 1, '1756', '10411756', '經濟學(一)', 'Economics I', '四資管一甲', '必修', 3, NULL),
@@ -873,7 +951,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('河尻和也', 104, 1, '1861', '10411861', '中級日語(一)', 'Intermediate Japanese(1)', '四應外二乙', '選修', 2, NULL),
 ('陳福堂', 104, 1, '1862', '10411862', '企業管理概論', 'Introduction to Business Administration', '四應外二乙', '選修', 2, NULL),
 ('唐蓋文', 104, 1, '1863', '10411863', '網際網路英文應用', 'Internet English Applications', '四應外二乙', '選修', 2, NULL),
-('李麗鳳', 104, 1, '1864', '10411864', '英文兒童文學', 'English Children''s Literature', '四應外二乙', '選修', 3, NULL),
+('李麗鳳', 104, 1, '1864', '10411864', '英文兒童文學', 'English Children\'s Literature', '四應外二乙', '選修', 3, NULL),
 ('廖佳慧', 104, 1, '1869', '10411869', '英語口語訓練(三)', 'English Oral Training(3)', '四應外三甲', '必修專業', 2, NULL),
 ('廖佳慧', 104, 1, '1870', '10411870', '英語口語訓練(三)', 'English Oral Training(3)', '四應外三甲', '必修專業', 2, NULL),
 ('紀麗秋', 104, 1, '1871', '10411871', '研究方法', 'Methodology', '四應外三甲', '必修專業', 2, NULL),
@@ -1040,8 +1118,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('吳俊儀', 104, 1, '2102', '10412102', '創意設計思考', 'Innovative design thinking', '四企管三甲', '選修', 2, NULL),
 ('蔡宗廷', 104, 1, '2103', '10412103', '行銷企劃', 'Marketing Planning', '四企管三甲', '選修', 3, NULL),
 ('楊劭為', 104, 1, '2104', '10412104', '企業資源規劃', 'Enterprise Resource Planning', '四企管三甲', '選修', 3, NULL),
-('張淑貞', 104, 1, '2105', '10412105', '個體經濟學', 'Microeconomics', '四企管三甲', '選修', 3, NULL);
-INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
+('張淑貞', 104, 1, '2105', '10412105', '個體經濟學', 'Microeconomics', '四企管三甲', '選修', 3, NULL),
 ('郭漢鍠', 104, 1, '211', '1041211', '水域休憩經營管理', 'Recreational waters Management', '碩休一職', '選修', 3, NULL),
 ('梁直青', 104, 1, '2110', '10412110', '管理資訊系統', 'Management Information Systems', '四企管三乙', '必修專業', 3, NULL),
 ('吳俊儀', 104, 1, '2111', '10412111', '企業研究方法', 'Business Research Method', '四企管三乙', '必修專業', 3, NULL),
@@ -1297,7 +1374,8 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('羅朝村', 104, 1, '2462', '10412462', '機構實習(一)', 'Practicum Training(1)', '四生科三攜', '選修', 2, NULL),
 ('楊禮 o ', 104, 1, '2463', '10412463', '校外實習(二)', 'Practicum Training (2)', '四生科三攜', '必修專業', 1, NULL),
 ('張耀南', 104, 1, '2464', '10412464', '校外實習(三)', 'Practicum Training (3)', '四生科三攜', '必修專業', 1, NULL),
-('李蕙敏', 104, 1, '2465', '10412465', '企業實習(一)', 'Internship(Ⅰ)', '四媒體二甲', '選修', 2, NULL),
+('李蕙敏', 104, 1, '2465', '10412465', '企業實習(一)', 'Internship(Ⅰ)', '四媒體二甲', '選修', 2, NULL);
+INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
 ('鄭文華', 104, 1, '2466', '10412466', '企業實習(一)', 'Internship(Ⅰ)', '技媒體二甲', '選修', 2, NULL),
 ('鄭文華', 104, 1, '2467', '10412467', '校外實習', 'Practical Training', '碩多一甲', '選修', 2, NULL),
 ('林中彥', 104, 1, '2468', '10412468', '校外實習(一)', 'Practical Training(1)', '四航電三甲', '選修', 2, NULL),
@@ -1307,7 +1385,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('黃社振', 104, 1, '254', '1041254', '創意性機構設計', 'Creative Mechanism Design', '碩設計一甲', '選修', 3, NULL),
 ('陳建信', 104, 1, '255', '1041255', '數值方法', 'Numerical Analysis', '碩設計一甲', '選修', 3, NULL),
 ('周榮源', 104, 1, '256', '1041256', '精密設備機械設計', 'Mechanical Design of Precision Equipment and Tools', '碩設計一甲', '選修', 3, NULL),
-('何智廷', 104, 1, '257', '1041257', '材料之機械性質', 'Material''s Mechanical Properties', '碩設計一甲', '選修', 3, NULL),
+('何智廷', 104, 1, '257', '1041257', '材料之機械性質', 'Material\'s Mechanical Properties', '碩設計一甲', '選修', 3, NULL),
 ('林維新', 104, 1, '26', '104126', '刀具設計分析', 'Analysis on Cutting Tools Design', '碩機電輔一職', '選修', 3, NULL),
 ('王培郁', 104, 1, '263', '1041263', '產業研發實習(一)', 'Industrial R&D Internship 1', '碩設計二甲', '選修', 0, NULL),
 ('葉進純', 104, 1, '268', '1041268', '專題研討一', 'Seminar(1)', '碩機電一甲', '必修專業', 0, NULL),
@@ -1427,8 +1505,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('許文景', 104, 1, '459', '1041459', 'VLSI測試與封裝導論', 'Introduction of VLSI test and package', '技電子二甲', '選修', 3, NULL),
 ('宋孟貞', 104, 1, '464', '1041464', '國文', 'Chinese', '技媒體一甲', '共同', 2, NULL),
 ('廖尹華', 104, 1, '465', '1041465', '體育(五)', 'Physical Education(5)', '技媒體一甲', '共同', 0, NULL),
-('溫瀅雅', 104, 1, '466', '1041466', '英文', 'English', '技媒體一甲', '共同', 2, NULL);
-INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
+('溫瀅雅', 104, 1, '466', '1041466', '英文', 'English', '技媒體一甲', '共同', 2, NULL),
 ('黃雅惠', 104, 1, '467', '1041467', '服務學習(一)', 'Service Learning(1)', '技媒體一甲', '共同', 0, NULL),
 ('鄭文華', 104, 1, '468', '1041468', '互動式多媒體設計', 'Interactive Multimedia Design', '技媒體一甲', '必修專業', 2, NULL),
 ('朱文浩', 104, 1, '469', '1041469', '2D電腦繪圖', '2D Computer Graphics', '技媒體一甲', '必修專業', 2, NULL),
@@ -1451,8 +1528,8 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('程諾蘭', 104, 1, '494', '1041494', '哲學與人生', 'Philosophy of Life', '通識', '通識', 2, NULL),
 ('鍾愛', 104, 1, '495', '1041495', '空間美學賞析', 'Appreciation of Spacial esthetics', '通識', '通識', 2, NULL),
 ('張正雄', 104, 1, '496', '1041496', '醫學與生活', 'General Education', '通識', '通識', 2, NULL),
-('張清良', 104, 1, '497', '1041497', '企業倫理與人生', 'Enterprise''s ethics and life', '通識', '通識', 2, NULL),
-('張清良', 104, 1, '498', '1041498', '企業倫理與人生', 'Enterprise''s ethics and life', '通識', '通識', 2, NULL),
+('張清良', 104, 1, '497', '1041497', '企業倫理與人生', 'Enterprise\'s ethics and life', '通識', '通識', 2, NULL),
+('張清良', 104, 1, '498', '1041498', '企業倫理與人生', 'Enterprise\'s ethics and life', '通識', '通識', 2, NULL),
 ('王文仁', 104, 1, '499', '1041499', '寓言與人生', 'Febles and Life', '通識', '通識', 2, NULL),
 ('王妙純', 104, 1, '501', '1041501', '生命關懷', 'Care for Life', '通識', '通識', 2, NULL),
 ('程諾蘭', 104, 1, '502', '1041502', '哲學與人生', 'Philosophy of Life', '通識', '通識', 2, NULL),
@@ -1810,10 +1887,10 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('洪然升', 104, 1, '7231', '10417231', '國文(一)', 'Chinese(1)', '夜四財金一甲', '共同', 3, NULL),
 ('蔡松霖', 104, 1, '7232', '10417232', '微積分(一)', 'Calculus(1)', '夜四財金一甲', '必修專業', 3, NULL),
 ('周惠如', 104, 1, '7233', '10417233', '英語聽講練習(一)', 'English Listening And Speaking Practice (1)', '夜四財金一甲', '共同', 1, NULL),
-('周惠如', 104, 1, '7234', '10417234', '英文(一)', 'English(1)', '夜四財金一甲', '共同', 2, NULL);
-INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
+('周惠如', 104, 1, '7234', '10417234', '英文(一)', 'English(1)', '夜四財金一甲', '共同', 2, NULL),
 ('吳淑惠', 104, 1, '7235', '10417235', '會計學(一)', 'Accounting(1)', '夜四財金一甲', '必修專業', 3, NULL),
-('涂光億', 104, 1, '7236', '10417236', '經濟學(一)', 'Economicss(2)', '夜四財金一甲', '必修專業', 3, NULL),
+('涂光億', 104, 1, '7236', '10417236', '經濟學(一)', 'Economicss(2)', '夜四財金一甲', '必修專業', 3, NULL);
+INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
 ('洪嘉慶', 104, 1, '7237', '10417237', '計算機概論', 'Introduction of computer', '夜四財金一甲', '必修專業', 3, NULL),
 ('吳樹欉', 104, 1, '7238', '10417238', '民法概要', 'Civil Law', '夜四財金一甲', '必修專業', 3, NULL),
 ('邵逸萱', 104, 1, '724', '1041724', '英文(一) 文院E班', 'English(1)', '四技二英文', '共同', 2, NULL),
@@ -2197,8 +2274,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('雷伯薰', 104, 2, '1109', '10421109', '工程數學(二)', 'Engineering Mathematics(2)', '四光電二乙', '必修專業', 3, NULL),
 ('莊賦祥', 104, 2, '1110', '10421110', '光電元件製程實習', 'Experiments of Electro-optical Device Precess', '四光電二乙', '選修', 1, NULL),
 ('廖得照', 104, 2, '1111', '10421111', '光學(三)', 'Optics (3)', '四光電二乙', '選修', 2, NULL),
-('陳慎銚', 104, 2, '1112', '10421112', '訊號與系統', 'signal and system', '四光電二乙', '選修', 3, NULL);
-INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
+('陳慎銚', 104, 2, '1112', '10421112', '訊號與系統', 'signal and system', '四光電二乙', '選修', 3, NULL),
 ('林蕙琪', 104, 2, '1117', '10421117', '實務專題(一)', 'Practical Projects(1)', '四光電三甲', '必修專業', 2, NULL),
 ('鄭旭志', 104, 2, '1118', '10421118', '光纖通訊與感測實習', 'Experiments for optical fiber communications and s', '四光電三甲', '選修', 1, NULL),
 ('廖重賓', 104, 2, '1119', '10421119', '近代光電實驗', 'Experiments of modern optics', '四光電三甲', '選修', 1, NULL),
@@ -2333,12 +2409,13 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('朱存權', 104, 2, '1302', '10421302', '引擎設計', 'Engine Design', '四車輛四甲', '選修', 3, NULL),
 ('黃士哲', 104, 2, '1307', '10421307', '通識教育講座', 'Lectures for General Education', '四航電一甲', '共同', 1, NULL),
 ('洪然升', 104, 2, '1308', '10421308', '國文(二)', 'Chinese(2)', '四航電一甲', '共同', 2, NULL),
-('蔣俊岳', 104, 2, '1309', '10421309', '微積分(二)', 'Calculus(2)', '四航電一甲', '必修專業', 3, NULL),
+('蔣俊岳', 104, 2, '1309', '10421309', '微積分(二)', 'Calculus(2)', '四航電一甲', '必修專業', 3, NULL);
+INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
 ('林易泉', 104, 2, '131', '1042131', '數位視訊處理', 'Digital Video Processing', '碩資工一甲', '選修', 3, NULL),
 ('楊紋貞', 104, 2, '1310', '10421310', '體育(二)', 'Physical Education(2)', '四航電一甲', '共同', 0, NULL),
 ('黃雅惠', 104, 2, '1311', '10421311', '服務學習(二)', 'Service Learning(2)', '四航電一甲', '共同', 0, NULL),
 ('李榮全', 104, 2, '1312', '10421312', '數位邏輯實習', 'Digital logical Lab', '四航電一甲', '必修專業', 1, NULL),
-('張鴻義', 104, 2, '1313', '10421313', '微處理機原理及應用', 'Microprocessor Theory and it''s Application', '四航電一甲', '必修專業', 3, NULL),
+('張鴻義', 104, 2, '1313', '10421313', '微處理機原理及應用', 'Microprocessor Theory and it\'s Application', '四航電一甲', '必修專業', 3, NULL),
 ('蔡永利', 104, 2, '1314', '10421314', '飛機系統導論', 'Introduction of Aircraft Systems', '四航電一甲', '必修專業', 3, NULL),
 ('呂文祺', 104, 2, '1315', '10421315', '無人飛機概論', 'Introduction of UAV', '四航電一甲', '選修', 2, NULL),
 ('張鴻義', 104, 2, '1316', '10421316', '視窗程式設計', 'Windows program design', '四航電一甲', '選修', 3, NULL),
@@ -2354,7 +2431,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('黃雅惠', 104, 2, '1329', '10421329', '服務學習(二)', 'Service Learning(2)', '四航電一乙', '共同', 0, NULL),
 ('江季翰', 104, 2, '133', '1042133', '行動計算與應用', 'Mobile Computing and Applications', '碩資工一甲', '選修', 3, NULL),
 ('李榮全', 104, 2, '1330', '10421330', '數位邏輯實習', 'Digital logical Lab', '四航電一乙', '必修專業', 1, NULL),
-('張鴻義', 104, 2, '1331', '10421331', '微處理機原理及應用', 'Microprocessor Theory and it''s Application', '四航電一乙', '必修專業', 3, NULL),
+('張鴻義', 104, 2, '1331', '10421331', '微處理機原理及應用', 'Microprocessor Theory and it\'s Application', '四航電一乙', '必修專業', 3, NULL),
 ('蔡永利', 104, 2, '1332', '10421332', '飛機系統導論', 'Introduction of Aircraft Systems', '四航電一乙', '必修專業', 3, NULL),
 ('鄭慶章', 104, 2, '1333', '10421333', '物理實驗(二)', 'Physics Exp.(2)', '四航電一乙', '必修專業', 1, NULL),
 ('鄭慶章', 104, 2, '1334', '10421334', '物理(二)', 'Physics(2)', '四航電一乙', '必修專業', 3, NULL),
@@ -2584,8 +2661,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('黃雅惠', 104, 2, '1651', '10421651', '服務學習(二)', 'Service Learning(2)', '四電子一甲', '共同', 0, NULL),
 ('鄭瑩慧', 104, 2, '1652', '10421652', '物理實驗(二)', 'Physics Lab.(2)', '四電子一甲', '必修', 1, NULL),
 ('閔庭輝', 104, 2, '1653', '10421653', '程式語言', 'Program Language', '四電子一甲', '必修', 3, NULL),
-('陳柏宏', 104, 2, '1654', '10421654', '數位系統設計實習', 'Digital Systems Design Lab.', '四電子一甲', '必修專業', 1, NULL);
-INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
+('陳柏宏', 104, 2, '1654', '10421654', '數位系統設計實習', 'Digital Systems Design Lab.', '四電子一甲', '必修專業', 1, NULL),
 ('陳柏宏', 104, 2, '1655', '10421655', '數位系統設計', 'Digital Systems Design', '四電子一甲', '必修專業', 3, NULL),
 ('吳添全', 104, 2, '1656', '10421656', '物理(二)', 'Physics(2)', '四電子一甲', '必修專業', 3, NULL),
 ('閔庭輝', 104, 2, '1657', '10421657', '電腦與網路應用實習', 'Computer and Network Application Lab', '四電子一甲', '選修', 1, NULL),
@@ -2847,7 +2923,8 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('劉正達', 104, 2, '2014', '10422014', '統計學(二)', 'Statistics(2)', '四企管二甲', '必修專業', 3, NULL),
 ('呂麒麟', 104, 2, '2015', '10422015', '財務管理', 'Financial Management', '四企管二甲', '必修專業', 3, NULL),
 ('楊劭為', 104, 2, '2016', '10422016', '生產與作業管理', 'Production and Operations Management', '四企管二甲', '必修專業', 3, NULL),
-('鄭錳新', 104, 2, '2017', '10422017', '消費者行為', 'Consumer Behavior', '四企管二甲', '選修', 3, NULL),
+('鄭錳新', 104, 2, '2017', '10422017', '消費者行為', 'Consumer Behavior', '四企管二甲', '選修', 3, NULL);
+INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
 ('吳俊儀', 104, 2, '2018', '10422018', '服務業管理', 'Management of Service Industry', '四企管二甲', '選修', 3, NULL),
 ('梁直青', 104, 2, '2019', '10422019', '商業智慧導論', 'Business Intelligence', '四企管二甲', '選修', 3, NULL),
 ('吳君毅', 104, 2, '2024', '10422024', '體育(四)', 'Physical Education(4)', '四企管二乙', '共同', 0, NULL),
@@ -2969,8 +3046,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('楊佳霖', 104, 2, '2199', '10422199', '國文(二)', 'Chinese(2)', '四休閒一甲', '共同', 2, NULL),
 ('林文煌', 104, 2, '2200', '10422200', '體育(二)', 'Physical Education(2)', '四休閒一甲', '共同', 0, NULL),
 ('黃雅惠', 104, 2, '2201', '10422201', '服務學習(二)', 'Service Learning(2)', '四休閒一甲', '共同', 0, NULL),
-('梁大慶', 104, 2, '2202', '10422202', '資訊軟體應用', 'Information  Software  Applicatiom', '四休閒一甲', '必修', 2, NULL);
-INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
+('梁大慶', 104, 2, '2202', '10422202', '資訊軟體應用', 'Information  Software  Applicatiom', '四休閒一甲', '必修', 2, NULL),
 ('王文瑛', 104, 2, '2203', '10422203', '休閒心理與行為', 'Psychology and Human Behavior of Leisure', '四休閒一甲', '必修專業', 2, NULL),
 ('李彥希', 104, 2, '2204', '10422204', '遊憩環境創意設計', 'Creative Design of Recreational Environment', '四休閒一甲', '必修專業', 2, NULL),
 ('郭彰仁', 104, 2, '2205', '10422205', '基地分析', 'Site Analysis', '四休閒一甲', '必修專業', 2, NULL),
@@ -3258,9 +3334,9 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('郭祐旻', 104, 2, '485', '1042485', '網路與社會', 'Internet and Society', '通識', '通識', 2, NULL),
 ('郭祐旻', 104, 2, '486', '1042486', '網路與社會', 'Internet and Society', '通識', '通識', 2, NULL),
 ('張正雄', 104, 2, '487', '1042487', '醫學與生活', 'General Education', '通識', '通識', 2, NULL),
-('林佑儒', 104, 2, '488', '1042488', '企業倫理與人生', 'Enterprise''s ethics and life', '通識', '通識', 2, NULL),
-('林佑儒', 104, 2, '489', '1042489', '企業倫理與人生', 'Enterprise''s ethics and life', '通識', '通識', 2, NULL),
-('張清良', 104, 2, '490', '1042490', '企業倫理與人生', 'Enterprise''s ethics and life', '通識', '通識', 2, NULL),
+('林佑儒', 104, 2, '488', '1042488', '企業倫理與人生', 'Enterprise\'s ethics and life', '通識', '通識', 2, NULL),
+('林佑儒', 104, 2, '489', '1042489', '企業倫理與人生', 'Enterprise\'s ethics and life', '通識', '通識', 2, NULL),
+('張清良', 104, 2, '490', '1042490', '企業倫理與人生', 'Enterprise\'s ethics and life', '通識', '通識', 2, NULL),
 ('廖重賓', 104, 2, '491', '1042491', '心靈與科學的橋', 'Bridge mind and science', '通識', '通識', 2, NULL),
 ('王文仁', 104, 2, '492', '1042492', '寓言與人生', 'Febles and Life', '通識', '通識', 2, NULL),
 ('王妙純', 104, 2, '493', '1042493', '生命關懷', 'Care for Life', '通識', '通識', 2, NULL),
@@ -3280,7 +3356,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('謝鴻文', 104, 2, '506', '1042506', '表演藝術賞析', 'Appreciate of performing arts', '通識', '通識', 2, NULL),
 ('鍾愛', 104, 2, '507', '1042507', '藝術賞析', 'Appreciation of  Art', '通識', '通識', 2, NULL),
 ('許坤明', 104, 2, '508', '1042508', '科技與生活應用', 'Technology', '通識', '通識', 2, NULL),
-('張清良', 104, 2, '509', '1042509', '企業倫理與人生', 'Enterprise''s ethics and life', '通識', '通識', 2, NULL),
+('張清良', 104, 2, '509', '1042509', '企業倫理與人生', 'Enterprise\'s ethics and life', '通識', '通識', 2, NULL),
 ('陳俊仁', 104, 2, '51', '104251', '專題研討(二)', 'Seminar(2)', '碩自動一甲', '必修專業', 0, NULL),
 ('施梅紛', 104, 2, '510', '1042510', '聽覺藝術賞析', 'Appreciation of Music Arts', '通識', '通識', 2, NULL),
 ('王清煌', 104, 2, '511', '1042511', '心理與人生', 'Psychology and Life', '通識', '通識', 2, NULL),
@@ -3360,10 +3436,10 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('趙育隆', 104, 2, '579', '1042579', '自然與永續發展(核)', 'Sustainable Development', '通識', '通識', 2, NULL),
 ('陳俊仁', 104, 2, '58', '104258', '高等精密量測', 'Advanced Precision Measurement', '碩自動一甲', '選修', 3, NULL),
 ('曾鴻文', 104, 2, '580', '1042580', '法學緒論(核)', 'Introduction to Legal Science', '通識', '通識', 2, NULL),
-('羅文苑', 104, 2, '581', '1042581', '心理學導論(核)', 'An Introduction to Psychology', '通識', '通識', 2, NULL);
-INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
+('羅文苑', 104, 2, '581', '1042581', '心理學導論(核)', 'An Introduction to Psychology', '通識', '通識', 2, NULL),
 ('羅文苑', 104, 2, '582', '1042582', '心理學導論(核)', 'An Introduction to Psychology', '通識', '通識', 2, NULL),
-('羅文苑', 104, 2, '583', '1042583', '心理學導論(核)', 'An Introduction to Psychology', '通識', '通識', 2, NULL),
+('羅文苑', 104, 2, '583', '1042583', '心理學導論(核)', 'An Introduction to Psychology', '通識', '通識', 2, NULL);
+INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
 ('施淑真', 104, 2, '584', '1042584', '心理學導論(核)', 'An Introduction to Psychology', '通識', '通識', 2, NULL),
 ('施淑真', 104, 2, '585', '1042585', '心理學導論(核)', 'An Introduction to Psychology', '通識', '通識', 2, NULL),
 ('方俊源', 104, 2, '586', '1042586', '文化觀察研究(核)', 'Culture observational study', '通識', '通識', 2, NULL),
@@ -3731,8 +3807,7 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('黃雅惠', 104, 2, '785', '1042785', '服務學習(二)', 'Service Learning(2)', '四設計一甲', '共同', 0, NULL),
 ('黃社振', 104, 2, '786', '1042786', '靜力學', 'Statics', '四設計一甲', '必修', 3, NULL),
 ('蔡振凱', 104, 2, '787', '1042787', '物理實驗', 'Physics Lab.', '四設計一甲', '必修專業', 1, NULL),
-('蕭俊卿', 104, 2, '788', '1042788', '工廠實習(二)CNC及CAM實習', 'Workshop practice', '四設計一甲', '必修專業', 1, NULL);
-INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
+('蕭俊卿', 104, 2, '788', '1042788', '工廠實習(二)CNC及CAM實習', 'Workshop practice', '四設計一甲', '必修專業', 1, NULL),
 ('王培郁', 104, 2, '789', '1042789', '機械製圖(二)', 'Mechanical Drawing (2)', '四設計一甲', '必修專業', 2, NULL),
 ('嚴家銘', 104, 2, '790', '1042790', '網際內容管理', 'Internet Content Management', '四設計一甲', '選修', 3, NULL),
 ('羅煜聘', 104, 2, '791', '1042791', '物理(二)', 'Physics(2)', '四設計一甲', '必修', 3, NULL),
@@ -3868,7 +3943,8 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 ('楊授印', 104, 2, '920', '1042920', '綠色能源概論', 'Green energy introduction', '四動機二甲', '選修', 3, NULL),
 ('林世章', 104, 2, '921', '1042921', '機器動力學', 'Dynamics of Machinery', '四動機二甲', '選修', 3, NULL),
 ('簡瑞宇', 104, 2, '926', '1042926', '體育(四)', 'Physical Education(4)', '四動機二乙', '共同', 0, NULL),
-('陳新郁', 104, 2, '927', '1042927', '材料力學(一)', 'Mechanics of Material(1)', '四動機二乙', '必修', 3, NULL),
+('陳新郁', 104, 2, '927', '1042927', '材料力學(一)', 'Mechanics of Material(1)', '四動機二乙', '必修', 3, NULL);
+INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `classN`, `classEN`, `major`, `classtype`, `credit`, `error`) VALUES
 ('阮岱珈', 104, 2, '928', '1042928', '電腦數控工具機及實習', 'Computer Numerical Control Machine and Practice', '四動機二乙', '必修專業', 1, NULL),
 ('葉進純', 104, 2, '929', '1042929', '應用電子學實驗', 'Applied Electronics Lab.', '四動機二乙', '必修專業', 1, NULL),
 ('藍友烽', 104, 2, '93', '104293', '書報討論(二)', 'Postgraduate Discussion (2)', '碩資管一甲', '必修專業', 0, NULL),
@@ -3925,18 +4001,17 @@ INSERT INTO `nfuclass` (`teacherN`, `year`, `turn`, `classnumber`, `classid`, `c
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `nfu_recall`
+-- Table structure for table `nfu_recall`
 --
 
-CREATE TABLE IF NOT EXISTS `nfu_recall` (
-  `id` int(50) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nfu_recall` (
+  `id` int(50) NOT NULL,
   `content` varchar(250) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Postid` int(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=138 ;
+  `Postid` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 資料表的匯出資料 `nfu_recall`
+-- Dumping data for table `nfu_recall`
 --
 
 INSERT INTO `nfu_recall` (`id`, `content`, `Postid`) VALUES
@@ -4054,8 +4129,58 @@ INSERT INTO `nfu_recall` (`id`, `content`, `Postid`) VALUES
 (134, 'lol', 10),
 (135, '暑修很好過 給分超級鬆 ', 88),
 (136, '老師教學很棒，很推，一點都不難，推薦不管本系外系都能修', 4),
-(137, '有夠愛當  OO 人', 83);
+(137, '有夠愛當  OO 人', 83),
+(138, '板主變成苦命煙酒生ㄌㄚ˙', 0),
+(139, '作業很多', 7),
+(140, '回樓上 是的ＱＱ', 0);
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `LoginDoc`
+--
+ALTER TABLE `LoginDoc`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `nfu`
+--
+ALTER TABLE `nfu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `nfuclass`
+--
+ALTER TABLE `nfuclass`
+  ADD PRIMARY KEY (`classid`);
+
+--
+-- Indexes for table `nfu_recall`
+--
+ALTER TABLE `nfu_recall`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `LoginDoc`
+--
+ALTER TABLE `LoginDoc`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+--
+-- AUTO_INCREMENT for table `nfu`
+--
+ALTER TABLE `nfu`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
+--
+-- AUTO_INCREMENT for table `nfu_recall`
+--
+ALTER TABLE `nfu_recall`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
